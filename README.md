@@ -1,34 +1,13 @@
 # Stock Price Prediction of Nifty 50 Companies
-## Group members
-- Nihal N. Bhopatrao (Roll No. 5)
-- Sanket R. Kumbhare (Roll No. 36)
-- Shashank D. Wankhede (Roll No. 59)
----
-## Project Guide
-- Prof. A. S. Kunte
----
 ## Content
 ### Main Directory
 ```
 Nifty-Prediction  
-└───Documents
 └───Nifty-50-Prediction
 └───models
 └───Screenshots
 ```
-### 1. [Documents Folder](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Documents)
-Contains Reports, PPT and Project diaries of 7<sup>th</sup> and 8<sup>th</sup> semester.
-> Documents Directory
-```
-Documents
-|   7th sem project diary smpp.pdf
-|   PPT Sem8 Stock Market Prediction.pdf
-|   Project Report Stock Market Prediction.pdf
-|   Sem 8 Project Diary.pdf
-|   Sem8 report stock Price Prediction.pdf
-|   Stock Market Prediction PPT-converted.pptx 
-```
-### 2. [Nifty-50-Prediction Folder](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Nifty-50-Prediction)
+### [Nifty-50-Prediction Folder]
 Contains following Django Project files and folders.
 > Nifty-50-Prediction Directory
 ```
@@ -40,7 +19,7 @@ Nifty-50-Prediction
 |   manage.py
 |   nifty50Companies.csv 
 ```
-  - #### [Stock_Prediction](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Nifty-50-Prediction/Stock_Prediction)
+  - #### [Stock_Prediction]
   > The Django project holds some configurations that apply to the project as a whole, such as project settings, URLs, shared templates and static files. Each application can have its own database and has its own functions to control how the data is displayed to the user in HTML templates.\
   > Stock_Prediction Directory
  ```
@@ -51,7 +30,7 @@ Nifty-50-Prediction
  |   urls.py
  |   wsgi.py
  ```
-  - #### [lstm](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Nifty-50-Prediction/lstm)
+  - #### [lstm]
   > It is special kind of recurrent neural network that is capable of learning long term dependencies in data. This is achieved because the recurring module of the model has a combination of four layers interacting with each other.\
   > lstm Directory
  ```
@@ -62,7 +41,7 @@ Nifty-50-Prediction
  |   weights_final.h5
  ```
 **Our LSTM model** \
-following code is from [TrainModel.py](https://github.com/Sanket-Kumbhare/Nifty-Prediction/blob/master/Nifty-50-Prediction/lstm/TrainModel.py)
+following code is from [TrainModel.py]
 ```python
 model = Sequential()
 model.add(LSTM(64, activation='relu', return_sequences=True,input_shape=(n_steps, n_features)))
@@ -72,7 +51,7 @@ model.compile(optimizer='adam', loss='mse',)
 model.fit(X, y, epochs=30, verbose=1)
 ```
 **Prediction for 30 days** \
-following code is from [RunModel.py](https://github.com/Sanket-Kumbhare/Nifty-Prediction/blob/master/Nifty-50-Prediction/lstm/RunModel.py)
+following code is from [RunModel.py]
 ```python
 def getNext30Days(self):
         self.__inputHandler()
@@ -107,7 +86,7 @@ def getNext30Days(self):
         predictions = lst_output
         return predictions
 ```
-  - #### [stock](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Nifty-50-Prediction/stock)
+  - #### [stock]
   > A Django application is a Python package that is specifically intended for use in a Django project. An application may use common Django conventions, such as having models , tests , urls , and views submodules.\
   > stock Directory
 ```
@@ -125,7 +104,7 @@ stock
 |   tests.py
 |   views.py
 ```
-  - #### [db.sqlite3](https://github.com/Sanket-Kumbhare/Nifty-Prediction/tree/master/Nifty-50-Prediction/db.sqlite)
+  - #### [db.sqlite3]
   > SQLite3 is a software library that provides a relational database management system. The lite in SQLite means lightweight in terms of setup, database administration, and required resources. SQLite has the following noticeable features: self-contained, serverless, zero-configuration, transactional.\
   > We are using sqlite3 for manageing User Authentication
 <img src="https://github.com/Sanket-Kumbhare/Nifty-Prediction/blob/master/Screenshots/myapp_models.png" width="800px;"/>
@@ -160,7 +139,6 @@ Contains screenshots of the UI
 - `keras` Keras is a deep learning API written in Python, running on top of the machine learning platform TensorFlow.
 - `datetime` The datetime module supplies classes for manipulating dates and times.
 ---
-## Contributors
-| [<img src="https://avatars.githubusercontent.com/u/58529304?v=4" width="100px;"/><br /><sub><b>Sanket-Kumbhare</b></sub>](https://github.com/Sanket-Kumbhare) | [<img src="https://avatars.githubusercontent.com/u/31096252?v=4" width="100px;"/><br /><sub><b>swankhede</b></sub>](https://github.com/swankhede) | [<img src="https://avatars.githubusercontent.com/u/80164927?v=4" width="100px;"/><br /><sub><b>nihalbhopatrao</b></sub>](https://github.com/nihalbhopatrao) | [<img src="https://avatars.githubusercontent.com/u/83209588?v=4" width="100px;"/><br /><sub><b>kgce-git</b></sub>](https://github.com/kgce-git) | 
+
 :---: | :---: | :---: |:---:
 ---
