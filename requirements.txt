@@ -1,0 +1,12 @@
+tensorflow
+tensorflow-estimator
+tensorflow-io-gcs-filesystem
+termcolor
+threadpoolctl
+typing_extensions
+tzdata
+tzlocal
+urllib3
+Werkzeug
+wrapt
+zope.interface
